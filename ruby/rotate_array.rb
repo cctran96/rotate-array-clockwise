@@ -1,5 +1,8 @@
 def rotate_array(arr, k)
-  # type your code in here
+  return arr if arr == []
+  l = k % arr.length
+  shifts = arr.slice!(-l, l)
+  [*shifts, *arr]
 end
 
 if __FILE__ == $PROGRAM_NAME
